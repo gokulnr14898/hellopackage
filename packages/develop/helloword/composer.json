@@ -1,0 +1,26 @@
+{
+    "name": "tsi/helloword",
+    "description": "Description of your package",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Tsi\\Helloword\\": "packages/develop/helloword/src"
+        }
+    },
+    "authors": [
+        {
+            "name": "gokul",
+            "email": "gokulnr@tendersoftware.in"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tsi\\Helloword\\PackageServiceProvider"
+            ]
+        }
+    },
+    "require": {}
+}
