@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\PackageName;
+namespace Tsi\Helloword;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,6 +13,11 @@ class PackageServiceProvider extends ServiceProvider
 
     public function register()
     {
-        // Register bindings, singletons, or other services
+         // Load routes, views, or other assets.
+         $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+         $this->loadViewsFrom(__DIR__.'/resources/views', 'yourpackage');
+         $this->publishes([
+             __DIR__.'/config/yourpackage.php' => config_path('yourpackage.php'),
+         ]);
     }
 }
